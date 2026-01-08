@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.app-header p {
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+.app-main {
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Upload Component */
+.upload-container {
+  text-align: center;
+}
+
+.upload-box {
+  border: 3px dashed #ddd;
+  border-radius: 12px;
+  padding: 60px;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.upload-box:hover {
+  border-color: #667eea;
+  background: #f8f9ff;
+}
+
+.file-label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #666;
+}
+
+/* Buttons */
+.btn-primary {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #5568d3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: #f3f4f6;
+  color: #374151;
+  border: 2px solid #e5e7eb;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+  background: #e5e7eb;
+}
+
+/* Skills */
+.skills-container {
+  margin: 30px 0;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.skill-chip {
+  background: #f0fdf4;
+  color: #166534;
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #bbf7d0;
+  font-size: 0.9rem;
+}
+
+/* Two Column Layout */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* Job Input */
+.job-textarea {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  resize: vertical;
+  margin: 15px 0;
+}
+
+.job-textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+/* Match Results */
+.score-card {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.score-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 8px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  background: #fafafa;
+}
+
+.score-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.explanation-box {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 25px 0;
+  border-left: 4px solid #667eea;
+}
+
+.explanation-box p {
+  line-height: 1.6;
+  color: #374151;
+}
+
+.skills-breakdown {
+  margin-top: 30px;
+}
+
+.skills-section {
+  margin: 25px 0;
+}
+
+.skills-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 6px;
+  margin: 5px;
+  font-size: 0.9rem;
+}
+
+.skill-tag.matched {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #6ee7b7;
+}
+
+.skill-tag.missing {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+}
+
+/* Utilities */
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error {
+  color: #dc2626;
+  background: #fee2e2;
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 15px;
+  border-left: 4px solid #dc2626;
+}
+
+.resume-info {
+  background: #eff6ff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 4px solid #3b82f6;
+}
+
+@media (max-width: 768px) {
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+}
