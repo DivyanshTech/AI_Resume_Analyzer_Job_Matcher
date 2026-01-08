@@ -1,5 +1,3 @@
----
-
 ## ✨ Features
 
 ### 📄 Resume Support
@@ -28,7 +26,6 @@
 ### 🌐 Language Support
 - English only (extensible to 50+ languages)
 
----
 
 ## 🛠 Technology Stack
 
@@ -48,7 +45,6 @@
 - **Icons:** Lucide React
 
 **Database Schema:**
-```sql
 CREATE TABLE resumes (
   id SERIAL PRIMARY KEY,
   filename VARCHAR,
@@ -58,7 +54,6 @@ CREATE TABLE resumes (
   created_at TIMESTAMP DEFAULT NOW()
 );
 
----
 
 ## 📦 Installation & Setup
 
@@ -108,7 +103,6 @@ Access:
 Frontend: http://localhost:3000
 API Docs: http://localhost:8000/docs
 
----
 
 ## 🚀 Usage
 
@@ -152,11 +146,6 @@ ai-resume-matcher/
 └── README.md
 
 
----
-
-
----
-
 ## 🤝 Contributing
 - Fork the repository  
 - Create a feature branch: `git checkout -b feature/YourFeature`  
@@ -169,7 +158,6 @@ ai-resume-matcher/
 - Add comments for complex logic  
 - Test locally before submitting PR  
 
----
 
 ## 📄 License
 This project is licensed under the **MIT License**.  
@@ -181,7 +169,6 @@ This project is licensed under the **MIT License**.
 - ✅ Private use allowed  
 - ⚠️ Liability and warranty not provided  
 
----
 
 ## 👨‍💻 Author
 **Divyansh Lodha**  
@@ -198,10 +185,12 @@ This project is licensed under the **MIT License**.
 
 ## SCREENSHOTS of APP
 <div align="center">
-<img src="../Screenshots/job description testing ui.png" width="200" alt="Job Description Testing UI" /> 
-<img src="../Screenshots/Job_MAtch_analysis UI.png" width="200" alt="Job Match Analysis UI" /> 
-<img src="../Screenshots/Skills extraction UI.png" width="200" alt="Skills Extraction UI" /> 
-<img src="../Screenshots/upload interface.png" width="200" alt="Upload Interface UI" /> 
+<img src="../Screenshots/job%20description%20testing%20ui.png" width="200" alt="Job Description Testing UI" /> 
+<img src="../Screenshots/Job_MAtch_analysis%20UI.png" width="200" alt="Job Match Analysis UI" /> 
+<img src="../Screenshots/Skills%20extraction%20UI.png" width="200" alt="Skills Extraction UI" /> 
+<img src="../Screenshots/upload%20interface.png" width="200" alt="Upload Interface UI" /> 
 <br>
 AI-powered resume analysis with semantic job matching | 100% Free ML Pipeline
 </div>
+
+
