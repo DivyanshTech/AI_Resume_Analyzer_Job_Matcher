@@ -14,3 +14,8 @@ build/
 
 # OS
 .DS_Store
+
+# FAISS & DB (ignore heavy/unnecessary files)
+backend/faiss_index.bin
+backend/faiss_index_metadata.pkl
+backend/resume_matcher.db
