@@ -31,12 +31,12 @@
 
 **Backend:**
 - **Framework:** FastAPI (async, production-ready)
-- **Database:** PostgreSQL (resume & skill storage)
+- **Database:** SQLite (lightweight local storage using SQLAlchemy ORM)
 - **PDF Processing:** PyPDF2
 - **Embeddings:** Sentence-Transformers (`all-MiniLM-L6-v2`) — 384-dim vectors, local, free
-- **Vector Search:** FAISS (fast cosine similarity)
-- **Skill Extraction:** GPT-4o-mini or spaCy / regex (100% free alternative)
-- **Similarity:** Cosine similarity (scikit-learn)
+- **Vector Storage:** FAISS (used for embedding persistence and future scalable nearest-neighbor retrieval)
+- **Skill Extraction:** Rule-based keyword extraction (regex + predefined skill list)
+- **Similarity:** Cosine similarity implemented manually using NumPy
 
 **Frontend:**
 - **Framework:** React 18 + TypeScript
@@ -44,23 +44,30 @@
 - **HTTP Client:** Axios
 - **Icons:** Lucide React
 
-**Database Schema:**
-CREATE TABLE resumes (
-  id SERIAL PRIMARY KEY,
-  filename VARCHAR,
-  extracted_text TEXT,
-  skills JSONB,
-  embedding BYTEA,
-  created_at TIMESTAMP DEFAULT NOW()
-);
+**Database: SQLite:**
+Core Table Structure (SQLAlchemy ORM):
 
+- id (Integer, Primary Key)
+- filename (String)
+- extracted_text (Text)
+- skills (JSON/Text)
+- embedding_id (String reference for FAISS index)
+- created_at (Timestamp)
+
+**⚙️ Current Matching Design**
+The system currently performs semantic comparison between a single resume and a single job description by:
+1. Generating embeddings for both texts
+2. Computing cosine similarity directly using NumPy
+3. Combining semantic similarity (60%) with explicit skill overlap (40%)
+
+FAISS is integrated for embedding storage and is structured to support future scalable multi-job nearest-neighbor retrieval.
 
 ## 📦 Installation & Setup
 
 ### Prerequisites
 - Python 3.9+
 - Node.js 16+
-- PostgreSQL 13+
+- SQLite (auto-created, no separate installation required)
 - 4GB RAM (for ML models)
 
 ### Steps
