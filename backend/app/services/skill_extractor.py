@@ -4,7 +4,7 @@ from typing import List
 
 # Example list of common skills
 COMMON_SKILLS = [
-    "Python", "Java", "C++", "FastAPI", "Django", "Flask", 
+    "Python", "Java", "C++", "FastAPI", "Django", "Flask","Mongodb",
     "PostgreSQL", "MySQL", "Docker", "Kubernetes", "AWS", 
     "Git", "REST", "SQL", "HTML", "CSS", "JavaScript"
 ]
